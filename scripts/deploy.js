@@ -2,11 +2,11 @@ async function main() {
     const [deployer] = await ethers.getSigners();
     console.log("Deploying contracts with the account:", deployer.address);
 
-    const Aryan = await ethers.getContractFactory("Aryan");
-    const aryan = await Aryan.deploy();
-    await aryan.waitForDeployment();
+    const Abhinesh = await ethers.getContractFactory("Abhinesh");
+    const abhinesh = await Abhinesh.deploy();
+    await abhinesh.waitForDeployment();
 
-    console.log("Aryan deployed to:", await aryan.getAddress());
+    console.log("Abhinesh deployed to:", await abhinesh.getAddress());
 }
 
 main()

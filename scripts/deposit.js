@@ -1,11 +1,11 @@
 const hre = require("hardhat");
 const fxRootContractABI = require("../fxRootContractABI.json");
-const tokenContractJSON = require("../artifacts/contracts/Aryan.sol/Aryan.json");
+const tokenContractJSON = require("../artifacts/contracts/Abhinesh.sol/Abhinesh.json");
 
-const tokenAddress = "0xa6c2b344cf3363b0B58722392aE2B7a54585e44D";
+const tokenAddress = "0x9B1a17f27fd1EC9023d48ED503eF567211234bA2";
 const tokenABI = tokenContractJSON.abi;
 const FxERC721RootTunnel = "0x9E688939Cb5d484e401933D850207D6750852053";
-const walletAddress = "0x5F764efdbb77F98f7e1e772cbDA6dff75547096c";
+const walletAddress = "0x6381df244829960b4011c3225A2f96C979D59f30";
 
 async function main() {
   const tokenContract = await hre.ethers.getContractAt(tokenABI, tokenAddress);

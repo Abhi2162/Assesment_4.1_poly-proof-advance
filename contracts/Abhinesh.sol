@@ -3,12 +3,12 @@ pragma solidity ^0.8.18;
 import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Aryan is ERC721A, Ownable {
+contract Abhinesh is ERC721A, Ownable {
     uint256 public counter;
     mapping(uint256 => string) private _tokenURIs;
     mapping(uint256 => string) private _prompts;
 
-    constructor() ERC721A("Aryan", "ARY") Ownable(msg.sender) {
+    constructor() ERC721A("Abhinesh", "ABH") Ownable(msg.sender) {
         counter = 0;}
     function batchMintNFT(string[] memory nftURLs, string[] memory prompts) public onlyOwner {
         uint256 startTokenId = counter;

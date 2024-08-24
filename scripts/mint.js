@@ -1,10 +1,10 @@
-const tokenContractJSON = require("../artifacts/contracts/Aryan.sol/Aryan.json");
+const tokenContractJSON = require("../artifacts/contracts/Abhinesh.sol/Abhinesh.json");
 require('dotenv').config();
 const { ethers } = require("hardhat");
-const tokenAddress = "0xa6c2b344cf3363b0B58722392aE2B7a54585e44D"; 
-
+const tokenAddress = "0x9B1a17f27fd1EC9023d48ED503eF567211234bA2"; 
+/workspace/poly1/contracts
 async function main() {
-  const nft = await ethers.getContractAt("Aryan", tokenAddress);
+  const nft = await ethers.getContractAt("Abhinesh", tokenAddress);
   const tokenURIs = [
     "ipfs://QmZkCpqexepeCUfsCgvzaqLdFGGRBLupLhiEpwVeEPneA8",
     "ipfs://QmXRiDoTvzy74bFkKLftX9oiG11mv7gahoAm4b1Zhr1Zfs",
@@ -21,7 +21,7 @@ async function main() {
     "Generate an image of an Cyborg."
   ];
 
-  await nft.Mint(tokenURIs, prompts);
+  await nft.batchMintNFT(tokenURIs, prompts);
   console.log(`${tokenURIs.length} NFTs are Minted`);
 }
 
