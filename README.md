@@ -16,11 +16,11 @@ This project involves creating an NFT collection using the Ethereum Sepolia test
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Aryan1423/poly1.git
+   git clone https://github.com/Abhi2162/Assesment_4.1_poly-proof-advance
    cd poly1
 
 # Smart Contract
-## Aryan.sol
+## Abhinesh.sol
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
@@ -28,12 +28,12 @@ pragma solidity ^0.8.18;
 import "erc721a/contracts/ERC721A.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract Aryan is ERC721A, Ownable {
+contract Abhinesh is ERC721A, Ownable {
     uint256 public counter;
     mapping(uint256 => string) private _tokenURIs;
     mapping(uint256 => string) private _prompts;
 
-    constructor() ERC721A("Aryan", "ARY") Ownable(msg.sender) {
+    constructor() ERC721A("Abhinesh", "ABH") Ownable(msg.sender) {
         counter = 0;
         }
 
@@ -74,7 +74,7 @@ async function main() {
     const Aryan = await hre.ethers.deployContract("Aryan");
     await Aryan.deployed();
 
-    console.log("Aryan deployed to:", await Aryan.getAddress());
+    console.log("Abhinesh deployed to:", await Aryan.getAddress());
 }
 
 main().catch((error) => {
@@ -91,7 +91,7 @@ npx hardhat run scripts/mint.js --network sepolia
 ```
 ```
 const hre = require("hardhat");
-const tokenContractJSON = require("../artifacts/contracts/Aryan.sol/Aryan.json");
+const tokenContractJSON = require("../artifacts/contracts/Abhinesh.sol/Abhinesh.json");
 require('dotenv').config();
 
 const tokenAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
@@ -142,7 +142,7 @@ async function main() {
     const nftAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
     const bridgeAddress = "0xxxx"; // FxRoot contract address
 
-    const Aryan = await ethers.getContractAt("Aryan", nftAddress);
+    const Abhinesh = await ethers.getContractAt("Aryan", nftAddress);
 
     for (let tokenId = 0; tokenId < 5; tokenId++) {
         const tx = await Aryan.approve(bridgeAddress, tokenId);
@@ -166,7 +166,7 @@ Terminal code to run:
 npx hardhat run scripts/getBalance.js --network amoy
 ```
 const { ethers } = require("hardhat");
-const tokenContractJSON = require("../artifacts/contracts/Aryan.sol/Aryan.json");
+const tokenContractJSON = require("../artifacts/contracts/Abhinesh.sol/Abhinesh.json");
 require('dotenv').config();
 
 const tokenAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS_ON_AMOY";
@@ -193,7 +193,7 @@ npx hardhat run scripts/prompt.js --network sepolia
 ```
 ```
 const hre = require("hardhat");
-const tokenContractJSON = require("../artifacts/contracts/Aryan.sol/Aryan.json");
+const tokenContractJSON = require("../artifacts/contracts/Abhinesh.sol/Abhinesh.json");
 require('dotenv').config();
 
 const tokenAddress = "YOUR_DEPLOYED_CONTRACT_ADDRESS";
