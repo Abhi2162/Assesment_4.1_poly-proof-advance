@@ -2,10 +2,10 @@ const { ethers } = require("hardhat");
 
 async function checkBalance() {
     const [deployer] = await ethers.getSigners();
-    const nftAddress = "0x4a387A678d112D99460352ed3Dd983dD9Ae727bE";
-    const Aryan = await ethers.getContractAt("Aryan", nftAddress);
+    const nftAddress = "0xfb0201a809eb39772a60ec9fb6a8e7c472456d70";
+    const Abhinesh = await ethers.getContractAt("Abhinesh", nftAddress);
 
-    const balance = await Aryan.balanceOf(deployer.address);
+    const balance = await Abhinesh.balanceOf(deployer.address);
     console.log(`NFT balance on Amoy: ${balance.toString()}`);
 }
 
